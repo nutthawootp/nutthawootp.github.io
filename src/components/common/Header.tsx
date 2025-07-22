@@ -25,7 +25,12 @@ const Header: React.FC = () => {
   };
 
   const getLinkClassName = (sectionId: string) => {
-    return `hover:text-blue-600 ${activeSection === sectionId ? 'text-blue-500 font-bold' : 'text-gray-800'}`;
+    const isActive = activeSection === sectionId;
+    return `hover:text-blue-600 ${isActive ? 'text-blue-500 font-bold' : 'text-gray-800'}`;
+  };
+
+  const getLinkAriaCurrent = (sectionId: string) => {
+    return activeSection === sectionId ? 'page' : undefined;
   };
 
   useEffect(() => {
@@ -50,15 +55,21 @@ const Header: React.FC = () => {
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex space-x-6 items-center">
-          <li><a href="#hero" onClick={(e) => handleSmoothScroll(e, 'hero')} className={getLinkClassName('hero')}>Home</a></li>
-          <li><a href="#about" onClick={(e) => handleSmoothScroll(e, 'about')} className={getLinkClassName('about')}>About</a></li>
-          <li><a href="#projects" onClick={(e) => handleSmoothScroll(e, 'projects')} className={getLinkClassName('projects')}>Projects</a></li>
-          <li><a href="#contact" onClick={(e) => handleSmoothScroll(e, 'contact')} className={getLinkClassName('contact')}>Contact</a></li>
+          <li><a href="#hero" onClick={(e) => handleSmoothScroll(e, 'hero')} className={getLinkClassName('hero')} aria-current={getLinkAriaCurrent('hero')}>Home</a></li>
+          <li><a href="#about" onClick={(e) => handleSmoothScroll(e, 'about')} className={getLinkClassName('about')} aria-current={getLinkAriaCurrent('about')}>About</a></li>
+          <li><a href="#projects" onClick={(e) => handleSmoothScroll(e, 'projects')} className={getLinkClassName('projects')} aria-current={getLinkAriaCurrent('projects')}>Projects</a></li>
+          <li><a href="#contact" onClick={(e) => handleSmoothScroll(e, 'contact')} className={getLinkClassName('contact')} aria-current={getLinkAriaCurrent('contact')}>Contact</a></li>
         </ul>
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
-          <button onClick={toggleMenu} className="text-gray-800 focus:outline-none">
+          <button
+            onClick={toggleMenu}
+            className="text-gray-800 focus:outline-none"
+            aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-expanded={isOpen}
+            aria-controls="mobile-menu"
+          >
             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>
         </div>
@@ -68,10 +79,10 @@ const Header: React.FC = () => {
       {isOpen && (
         <div data-testid="mobile-menu" className="md:hidden bg-white">
           <ul className="flex flex-col items-center space-y-4 py-4">
-            <li><a href="#hero" onClick={(e) => handleSmoothScroll(e, 'hero')} className={getLinkClassName('hero')}>Home</a></li>
-            <li><a href="#about" onClick={(e) => handleSmoothScroll(e, 'about')} className={getLinkClassName('about')}>About</a></li>
-            <li><a href="#projects" onClick={(e) => handleSmoothScroll(e, 'projects')} className={getLinkClassName('projects')}>Projects</a></li>
-            <li><a href="#contact" onClick={(e) => handleSmoothScroll(e, 'contact')} className={getLinkClassName('contact')}>Contact</a></li>
+            <li><a href="#hero" onClick={(e) => handleSmoothScroll(e, 'hero')} className={getLinkClassName('hero')} aria-current={getLinkAriaCurrent('hero')}>Home</a></li>
+            <li><a href="#about" onClick={(e) => handleSmoothScroll(e, 'about')} className={getLinkClassName('about')} aria-current={getLinkAriaCurrent('about')}>About</a></li>
+            <li><a href="#projects" onClick={(e) => handleSmoothScroll(e, 'projects')} className={getLinkClassName('projects')} aria-current={getLinkAriaCurrent('projects')}>Projects</a></li>
+            <li><a href="#contact" onClick={(e) => handleSmoothScroll(e, 'contact')} className={getLinkClassName('contact')} aria-current={getLinkAriaCurrent('contact')}>Contact</a></li>
           </ul>
         </div>
       )}

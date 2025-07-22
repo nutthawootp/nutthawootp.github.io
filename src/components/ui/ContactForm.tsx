@@ -108,14 +108,14 @@ const ContactForm: React.FC = () => {
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
       {isSubmitting && (
-        <div className="bg-blue-50 border border-blue-300 text-blue-700 px-4 py-3 rounded relative animate-pulse" role="alert">
+        <div className="bg-blue-50 border border-blue-300 text-blue-700 px-4 py-3 rounded relative animate-pulse" role="status" aria-live="polite">
           <strong className="font-bold">Sending...</strong>
           <span className="block sm:inline"> Please wait while your message is being sent.</span>
         </div>
       )}
       
       {isSubmitted && !isSubmitting && (
-        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="alert">
+        <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative" role="status" aria-live="polite">
           <strong className="font-bold">Success!</strong>
           <span className="block sm:inline"> Your message has been sent.</span>
         </div>
@@ -166,7 +166,7 @@ const ContactForm: React.FC = () => {
 
       <div className="space-y-4">
         {submitError && (
-          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert">
+          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative" role="alert" aria-live="assertive">
             <strong className="font-bold">Error: </strong>
             <span className="block sm:inline">{submitError}</span>
           </div>
