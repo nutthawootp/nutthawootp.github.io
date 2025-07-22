@@ -1,4 +1,4 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { renderHook, act } from '@testing-library/react';
 import useScrollSpy from '../hooks/useScrollSpy';
 
@@ -56,13 +56,16 @@ describe('useScrollSpy', () => {
     });
     expect(result.current).toBe('section1');
 
-    // Simulate section2 entering viewport
+    // Simulate section1 leaving and section2 entering viewport
     act(() => {
-      callback([{ isIntersecting: true, target: document.getElementById('section2') }]);
+      callback([
+        { isIntersecting: false, target: document.getElementById('section1') },
+        { isIntersecting: true, target: document.getElementById('section2') }
+      ]);
     });
     expect(result.current).toBe('section2');
 
-    // Simulate section1 leaving and section2 leaving (no active section)
+    // Simulate all sections leaving viewport
     act(() => {
       callback([
         { isIntersecting: false, target: document.getElementById('section1') },

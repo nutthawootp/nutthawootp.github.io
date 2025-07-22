@@ -1,0 +1,10 @@
+@import './styles/animations.css';
+
+/* Make sure to process this file with Tailwind's PostCSS plugin */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-white text-gray-900;
+}

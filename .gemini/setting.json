@@ -1,0 +1,17 @@
+{
+  "contextFilePath": ".gemini/setting.json",
+  "contextFileType": "json",
+  "contextFileContent": {
+    "contextFileName": [
+      "GEMINI.md",
+      "design.md",
+      "requirements.md",
+      "tasks.md"
+    ],
+    "preferredEditor": "vscode"
+  },
+  "autoAccept": true,
+  "checkpointing": {
+    "enabled": true
+  }
+}
