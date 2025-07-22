@@ -116,7 +116,7 @@
     - Configure test runs (✓)
     - Add build step (✓)
     - Set up automatic deployment to GitHub Pages (✓)
-  - Create branch protection rules for main branch
-  - Add README.md with project documentation
-  - Add repository documentation (contributing guidelines, issue templates)
+  - Create branch protection rules for main branch (✓)
+  - Add README.md with project documentation (✓)
+  - Add repository documentation (contributing guidelines, issue templates) (✓)
   - *Requirements: Deployment and CI/CD*

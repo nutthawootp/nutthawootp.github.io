@@ -1,6 +1,8 @@
 # Personal Portfolio Website
 
-This is my personal portfolio website built with modern web technologies to showcase my projects, skills, and professional experience.
+## 🌟 Project Overview
+
+This project is a personal portfolio website designed to showcase my skills, projects, and professional experience. Built with modern web technologies, it emphasizes performance, accessibility, and responsive design to provide an optimal user experience across various devices.
 
 ## 🛠 Technologies Used
 
@@ -98,3 +100,11 @@ npm run coverage
 ## 📝 License
 
 This project is open source and available under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+
+We welcome contributions to this project! Please see our [Contributing Guidelines](CONTRIBUTING.md) for more details.
+
+## 🐛 Reporting Issues
+
+If you find any bugs or have feature requests, please open an issue using our [Issue Templates](.github/ISSUE_TEMPLATE/).
