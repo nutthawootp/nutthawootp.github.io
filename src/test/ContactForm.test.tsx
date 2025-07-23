@@ -65,7 +65,7 @@ describe('ContactForm', () => {
     await user.click(submitButton);
 
     // Check for loading state
-    const loadingAlert = await screen.findByRole('alert');
+    const loadingAlert = await screen.findByRole('status');
     expect(loadingAlert).toHaveClass('animate-pulse');
     expect(loadingAlert).toHaveClass('bg-blue-50');
 
