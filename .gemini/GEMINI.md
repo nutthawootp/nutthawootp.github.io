@@ -49,3 +49,28 @@ This project is a ersonal portfolio website will be built as a single-page appli
   - <https://llmstxt.site/>
   - <https://directory.llmstxt.cloud/>
 - If you find a relevant llms.txt file, follow the links until you have access to the complete documentation.
+
+## Git Commits
+
+### Multi-line Commit Messages
+
+To create a commit with a multi-line message in a way that is robust and avoids shell interpretation issues, follow these steps:
+
+1.  **Stage the files:**
+    ```bash
+    git add .
+    ```
+2.  **Create a temporary file** with the commit message (e.g., `commit_message.tmp`).
+3.  **Commit using the file:**
+    ```bash
+    git commit -F commit_message.tmp
+    ```
+4.  **Delete the temporary file:**
+    -   On Windows, use `del`:
+        ```bash
+        del commit_message.tmp
+        ```
+    -   On Linux/macOS, use `rm`:
+        ```bash
+        rm commit_message.tmp
+        ```
