@@ -3,9 +3,9 @@ import { personalInfo } from '../../data/personal';
 
 const Hero: React.FC = () => {
   return (
-    <section id="hero" className="flex flex-col items-center justify-center h-screen text-center bg-white">
-      <div className="max-w-4xl mx-auto px-4">
-        <div className="mb-8">
+    <section id="hero" className="flex flex-col items-center justify-center h-screen text-center bg-white overflow-hidden">
+      <div className="max-w-4xl mx-auto px-4 opacity-0 animate-fade-in" style={{ animationDelay: '0.2s' }}>
+        <div className="mb-8 transform translate-y-10 opacity-0 animate-slide-up" style={{ animationDelay: '0.4s' }}>
           <img
             src="/images/profile_pic.jpg"
             alt={personalInfo.name}
@@ -17,16 +17,16 @@ const Hero: React.FC = () => {
             }}
           />
         </div>
-        <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4">
+        <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4 transform translate-y-10 opacity-0 animate-slide-up" style={{ animationDelay: '0.6s' }}>
           {personalInfo.name}
         </h1>
-        <h2 className="text-2xl md:text-3xl font-light text-gray-600 mb-8">
+        <h2 className="text-2xl md:text-3xl font-light text-gray-600 mb-8 transform translate-y-10 opacity-0 animate-slide-up" style={{ animationDelay: '0.8s' }}>
           {personalInfo.title}
         </h2>
-        <p className="text-lg text-gray-700 mb-10 max-w-2xl mx-auto">
+        <p className="text-lg text-gray-700 mb-10 max-w-2xl mx-auto transform translate-y-10 opacity-0 animate-slide-up" style={{ animationDelay: '1.0s' }}>
           {personalInfo.bio}
         </p>
-        <div className="flex justify-center space-x-4">
+        <div className="flex justify-center space-x-4 transform translate-y-10 opacity-0 animate-slide-up" style={{ animationDelay: '1.2s' }}>
           <a
             href="#projects"
             className="bg-gray-900 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-gray-800 transition duration-300 ease-in-out"
