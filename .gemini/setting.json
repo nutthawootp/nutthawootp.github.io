@@ -7,9 +7,9 @@
       "design.md",
       "requirements.md",
       "tasks.md"
-    ],
-    "preferredEditor": "vscode"
+    ]
   },
+  "preferredEditor": "vscode",
   "autoAccept": true,
   "checkpointing": {
     "enabled": true

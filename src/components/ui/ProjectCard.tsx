@@ -7,7 +7,10 @@ interface ProjectCardProps {
 
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
-    <div className="bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+    <div className="relative bg-white rounded-lg shadow-md overflow-hidden transition duration-300 hover:shadow-lg">
+      {project.featured && (
+        <span className="absolute top-2 right-2 bg-yellow-200 text-yellow-800 text-xs font-semibold px-2.5 py-0.5 rounded-full z-10">Featured</span>
+      )}
       <img 
         src={project.imageUrl} 
         alt={project.title} 
@@ -17,7 +20,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       />
       <div className="p-6">
         <h3 className="text-2xl font-semibold text-gray-800 mb-2">{project.title}</h3>
-        <p className="text-gray-600 text-sm mb-4 line-clamp-3">{project.description}</p>
+        <p className="text-gray-600 text-sm mb-2 line-clamp-3">{project.description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
           {project.technologies.map((tech, index) => (
             <span key={index} className="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full">

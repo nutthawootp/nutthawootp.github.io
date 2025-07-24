@@ -28,6 +28,7 @@ src/
 │   │   ├── Hero.tsx
 │   │   ├── About.tsx
 │   │   ├── Projects.tsx
+│   │   ├── Skill.tsx
 │   │   └── Contact.tsx
 │   └── ui/
 │       ├── Button.tsx
@@ -72,8 +73,11 @@ src/
 
 - Two-column layout (desktop) / single column (mobile)
 - Personal story and background
-- Skills grid organized by categories
 - Downloadable resume/CV link
+
+#### Skill Section
+
+- Skills grid organized by categories
 
 #### Projects Section
 

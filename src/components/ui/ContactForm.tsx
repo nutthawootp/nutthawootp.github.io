@@ -121,21 +121,24 @@ const ContactForm: React.FC = () => {
         </div>
       )}
 
-      <div>
-        <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name</label>
+      <div data-testid="name-input-container">
+        <label htmlFor="name" className="block text-sm font-medium text-gray-700">Name *</label>
         <input
           type="text"
           id="name"
           name="name"
           value={formData.name}
           onChange={handleChange}
+          placeholder='Your name'
+          required
+          autoComplete="name"
           className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
         />
-        {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name}</p>}
+        {errors.name && <p className="mt-1 text-sm text-red-600" data-testid="name-error">{errors.name}</p>}
       </div>
 
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email</label>
+        <label htmlFor="email" className="block text-sm font-medium text-gray-700">Email *</label>
         <input
           type="email"
           id="email"
@@ -143,6 +146,9 @@ const ContactForm: React.FC = () => {
           value={formData.email}
           onChange={handleChange}
           onBlur={handleBlur}
+          placeholder="your.email@example.com"
+          required
+          autoComplete="email"
           data-testid="email-input"
           className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
         />
@@ -152,16 +158,23 @@ const ContactForm: React.FC = () => {
       </div>
 
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message</label>
+        <label htmlFor="message" className="block text-sm font-medium text-gray-700">Message *</label>
         <textarea
           id="message"
           name="message"
           rows={5}
           value={formData.message}
           onChange={handleChange}
+          placeholder="Your message here..."
+          required
+          maxLength={1000}
+          autoComplete="off"
           className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-blue-500 focus:border-blue-500 sm:text-sm"
         ></textarea>
-        {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message}</p>}
+        <div className="flex justify-end text-sm text-gray-500 mt-1">
+          <span>{formData.message.length}/1000</span>
+          {errors.message && <p className="text-red-600" data-testid="message-error">{errors.message}</p>}
+        </div>
       </div>
 
       <div className="space-y-4">
@@ -192,6 +205,7 @@ const ContactForm: React.FC = () => {
             'Send Message'
           )}
         </button>
+        <p className="text-sm text-gray-500 text-center">* Required fields</p>
       </div>
     </form>
   );

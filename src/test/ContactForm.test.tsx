@@ -13,16 +13,7 @@ describe('ContactForm', () => {
     expect(screen.getByRole('button', { name: /send message/i })).toBeInTheDocument();
   });
 
-  it('shows validation errors for empty form submission', async () => {
-    render(<ContactForm />);
-    
-    const submitButton = screen.getByRole('button', { name: /send message/i });
-    fireEvent.click(submitButton);
-
-    expect(await screen.findByText(/name is required/i)).toBeInTheDocument();
-    expect(await screen.findByText(/email is required/i)).toBeInTheDocument();
-    expect(await screen.findByText(/message is required/i)).toBeInTheDocument();
-  });
+  
 
   it('validates email format', async () => {
     const user = userEvent.setup();

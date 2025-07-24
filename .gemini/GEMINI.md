@@ -1,6 +1,6 @@
 # Project: My Portfolio on github.io
 
-This project is a ersonal portfolio website will be built as a single-page application (SPA) using React.js with Vite.js as the build tool and Tailwind CSS for styling. The design follows modern web development best practices with a focus on performance, accessibility, and responsive design.
+This project is a personal portfolio website will be built as a single-page application (SPA) using React.js with Vite.js as the build tool and Tailwind CSS for styling. The design follows modern web development best practices with a focus on performance, accessibility, and responsive design.
 
 ## General Instructions
 

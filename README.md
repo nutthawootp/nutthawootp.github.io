@@ -18,9 +18,9 @@ This project is a personal portfolio website designed to showcase my skills, pro
 ## 🚀 Features
 
 - Responsive design
-- Project showcase
+- Project showcase with featured projects
 - About me section
-- Contact form
+- Enhanced contact form with validation, placeholders, and character counter
 - Skills showcase
 - Back to top functionality
 
