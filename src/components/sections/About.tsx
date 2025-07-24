@@ -18,6 +18,7 @@ const About: React.FC = () => {
               bioInView ? 'translate-x-0 opacity-100' : '-translate-x-10 opacity-0'
             }`}
           >
+            <h2 className="text-2xl font-semibold text-gray-800 mb-4">My Story</h2>
             <p className="mb-6">{personalInfo.bio}</p>
             <p className="mb-6">
               I am passionate about building scalable and user-friendly applications. 

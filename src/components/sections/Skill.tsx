@@ -17,7 +17,7 @@ const Skill: React.FC = () => {
         skillsInView ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'
       }`}
     >
-      <h2 className="text-3xl font-bold text-gray-900 mb-8">Skills & Technologies</h2>
+      <h3 className="text-3xl font-bold text-gray-900 mb-8">Skills & Technologies</h3>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
       {frontendSkills.length > 0 && (
         <div>
