@@ -48,22 +48,27 @@ This project leverages a robust stack of modern web technologies to deliver a hi
 This portfolio website is packed with features designed to provide a rich and interactive user experience:
 
 - **Responsive Design**: Ensures a seamless and optimal viewing experience across a wide range of devices, from desktops to mobile phones.
+
 - **Dynamic Project Showcase**: Highlights key projects with dedicated sections, including descriptions, technologies used, and links to live demos or repositories.
+
 - **Comprehensive About Me Section**: Provides insights into my professional background, skills, and personal interests.
+
 - **Interactive Contact Form**: A user-friendly form with real-time validation, helpful placeholders, and a character counter to facilitate easy communication.
+
 - **Skills Showcase**: Clearly presents my technical proficiencies, categorized for easy readability.
+
 - **Smooth Navigation**: Includes a "Back to Top" functionality for improved user experience on longer pages and a scroll spy feature to highlight the active section in the navigation.
 
 ## 📦 Project Structure
 
 The project follows a clear and modular structure to ensure maintainability and scalability:
 
-``` bash
+```bash
 src/
 ├── components/       # Reusable UI components
-│   ├── common/       #   Shared components (e.g., Header, Footer, BackToTop)
-│   ├── sections/     #   Main page sections (e.g., Hero, About, Projects, Contact, Skill)
-│   └── ui/           #   Smaller, generic UI elements (e.g., ContactForm, ProjectCard)
+│   ├── common/       # Shared components (e.g., Header, Footer, BackToTop)
+│   ├── sections/     # Main page sections (e.g., Hero, About, Projects, Contact, Skill)
+│   └── ui/           # Smaller, generic UI elements (e.g., ContactForm, ProjectCard)
 ├── data/             # Static data and TypeScript type definitions (e.g., personal info, projects, skills)
 ├── hooks/            # Custom React hooks for reusable logic (e.g., useScrollSpy)
 ├── styles/           # Global styles and animations (e.g., animations.css)
@@ -106,7 +111,7 @@ src/
 - `npm test` - Run unit tests
 - `npm run coverage` - Run tests with coverage report
 
-## 📊 Build Process Visualization
+## 📊 Build Process
 
 Understanding the project's build process is crucial for development and deployment. Below is a flowchart illustrating the steps involved when you run `npm run build`:
 
@@ -135,18 +140,23 @@ graph TD
 
 **Explanation of the Build Process:**
 
-- **Start Build Process**: The initiation point for building the application.
+- **Start Build Process**:The initiation point for building the application.
+
 - **Run npm run build**: This command triggers the entire production build sequence.
+
 - **Execute tsc -b (TypeScript Compilation)**: The first critical step where all TypeScript source code is compiled into standard JavaScript. This step also performs type checking.
+
 - **Check for TypeScript Errors**: A crucial decision point. If any TypeScript compilation errors are detected, the build process is halted.
+
 - **Execute vite build (Bundling & Optimization)**: If TypeScript compilation is successful (no errors), Vite takes over. This phase involves bundling all JavaScript, CSS, and other assets, optimizing them for production (e.g., minification, tree-shaking, code splitting), and preparing them for deployment.
+
 - **Generate Production Assets (dist/)**: Upon successful completion of the Vite build, all production-ready static files (HTML, CSS, JavaScript, images, etc.) are outputted into the `dist/` directory.
-- **Build Failed - TypeScript Errors**: Indicates that the build process terminated due to errors during TypeScript compilation.
+
 - **End Build Process - Success/Failed**: The final state, signifying whether the entire build operation completed successfully or encountered a failure.
 
 ## 🚀 Deployment
 
-This project is configured for continuous deployment to GitHub Pages using GitHub Actions. Any push to the `main` branch will automatically trigger a build and deployment process.
+This project is configured for continuous deployment to GitHub Pages ([https://nutthawootp.github.io/](https://nutthawootp.github.io/)) using GitHub Actions. Any push to the `main` branch will automatically trigger a build and deployment process.
 
 To manually deploy the application:
 
@@ -195,7 +205,8 @@ If you find any bugs or have feature requests, please open an issue using our [I
 
 If you have any questions, suggestions, or just want to connect, feel free to reach out:
 
-- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/nutthawoot-p)
-- **GitHub**: [nutthawootp](https://github.com/nutthawootp)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-nutthawootp-blue?style=flat-square&logo=linkedin)](https://www.linkedin.com/in/nutthawootp)
+
+[![GitHub](https://img.shields.io/badge/GitHub-nutthawootp-black?style=flat-square&logo=github)](https://github.com/nutthawootp)
 
 Thank you for visiting my portfolio!
