@@ -17,7 +17,7 @@
 
 ## 💡Project Overview
 
-Welcome to my personal portfolio website! This project serves as a dynamic showcase of my skills, projects, and professional journey as a software engineer. Crafted with a focus on modern web development principles, this single-page application (SPA) delivers a seamless, high-performance, and accessible user experience across all devices. It's designed to be a comprehensive representation of my technical abilities and creative solutions.
+Welcome to my personal portfolio website! This project serves as a dynamic showcase of my skills, projects, and professional journey as a data analyst. Crafted with a focus on modern web development principles, this single-page application (SPA) delivers a seamless, high-performance, and accessible user experience across all devices. It's designed to be a comprehensive representation of my technical abilities and creative solutions.
 
 ## 🛠 Technologies Used
 

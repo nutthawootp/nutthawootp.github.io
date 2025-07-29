@@ -71,7 +71,7 @@ src/
 
 #### About Section
 
-- Two-column layout (desktop) / single column (mobile)
+- Single-column layout for all dimensions
 - Personal story and background
 - Downloadable resume/CV link
 
@@ -111,6 +111,7 @@ interface Skill {
   name: string;
   category: 'frontend' | 'backend' | 'tools' | 'other';
   level: 'beginner' | 'intermediate' | 'advanced';
+  icon?: string;
 }
 
 interface PersonalInfo {
