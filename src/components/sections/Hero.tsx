@@ -20,7 +20,7 @@ const Hero: React.FC = () => {
         <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-4 transform translate-y-10 opacity-0 animate-slide-up" style={{ animationDelay: '0.6s' }}>
           {personalInfo.name}
         </h1>
-        <h2 className="text-2xl md:text-3xl font-light text-gray-600 mb-8 transform translate-y-10 opacity-0 animate-slide-up" style={{ animationDelay: '0.8s' }}>
+        <h2 className="text-2xl md:text-3xl font-normal text-gray-600 mb-8 transform translate-y-10 opacity-0 animate-slide-up" style={{ animationDelay: '0.8s' }}>
           {personalInfo.title}
         </h2>
         <p className="text-lg text-gray-700 mb-10 max-w-2xl mx-auto transform translate-y-10 opacity-0 animate-slide-up" style={{ animationDelay: '1.0s' }}>

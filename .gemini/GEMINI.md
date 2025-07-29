@@ -4,7 +4,17 @@ This project is a personal portfolio website will be built as a single-page appl
 
 ## General Instructions
 
-- We will plan things first, DO NOT run any codes or tesks without my approval.
+- We will plan things first, DO NOT run any codes or tasks without my approval.
+
+- Always ask for clarification if you are unsure about any task or requirement.
+- Use the provided specifications and guidelines to ensure consistency and quality in the codebase.
+
+## Prohibited Commands
+
+- All commands that require interaction with the terminal are prohibited.
+- This includes commands like `npm`, `yarn`, or any other command that modifies the codebase or installs dependencies.
+- Do not run any commands that could modify the codebase or project structure without explicit approval.
+- The better way is to provide suggestions or code snippets that I can either review and approve before execution, or copy that code and run it myself.
 
 ## specs folder
 

@@ -205,7 +205,7 @@ const ContactForm: React.FC = () => {
             'Send Message'
           )}
         </button>
-        <p className="text-sm text-gray-500 text-center">* Required fields</p>
+        <p className="text-sm text-gray-600 text-center">* Required fields</p>
       </div>
     </form>
   );

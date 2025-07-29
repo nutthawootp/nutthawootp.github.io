@@ -66,9 +66,11 @@ const Header: React.FC = () => {
           <button
             onClick={toggleMenu}
             className="text-gray-800 focus:outline-none"
-            aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+            aria-label="Mobile menu button" 
+            
             aria-expanded={isOpen}
             aria-controls="mobile-menu"
+            type="button"
           >
             {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
           </button>

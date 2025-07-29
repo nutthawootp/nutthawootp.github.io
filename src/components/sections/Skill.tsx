@@ -1,131 +1,44 @@
 import React from 'react';
 import { skills } from '../../data/skills';
 import { useInView } from '../../utils/animation';
+import SkillIcon from '../ui/SkillIcon';
 
 const Skill: React.FC = () => {
-  const frontendSkills = skills.filter(skill => skill.category === 'frontend');
-  const backendSkills = skills.filter(skill => skill.category === 'backend');
-  const toolsSkills = skills.filter(skill => skill.category === 'tools');
-  const otherSkills = skills.filter(skill => skill.category === 'other');
-  
-  const [skillsRef, skillsInView] = useInView({ threshold: 0.3 });
+  const [skillsRef, skillsInView] = useInView({ threshold: 0.2 });
+
+  const skillCategories = [
+    { title: 'Frontend', skills: skills.filter(s => s.category === 'frontend') },
+    { title: 'Backend', skills: skills.filter(s => s.category === 'backend') },
+    { title: 'Tools', skills: skills.filter(s => s.category === 'tools') },
+    { title: 'Other', skills: skills.filter(s => s.category === 'other') },
+  ];
 
   return (
     <div 
       ref={skillsRef}
-      className={`md:w-1/2 transform transition-all duration-700 ${
-        skillsInView ? 'translate-x-0 opacity-100' : 'translate-x-10 opacity-0'
-      }`}
+      className={`transition-opacity duration-1000 ${skillsInView ? 'opacity-100' : 'opacity-0'}`}
     >
-      <h3 className="text-3xl font-bold text-gray-900 mb-8">Skills & Technologies</h3>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-      {frontendSkills.length > 0 && (
-        <div>
-          <h3 className="text-2xl font-semibold mb-4 text-gray-900">Frontend</h3>
-          <ul className="space-y-2 text-gray-700">
-            {frontendSkills.map((skill, index) => (
-              <li 
-                key={index} 
-                className="flex items-center transform transition-all duration-300"
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                {skill.name}
-                <span 
-                  className={`ml-2 px-2 py-0.5 rounded-full text-xs font-semibold 
-                    ${skill.level === 'advanced' ? 'bg-red-200 text-red-800' : ''}
-                    ${skill.level === 'intermediate' ? 'bg-blue-200 text-blue-800' : ''}
-                    ${skill.level === 'beginner' ? 'bg-green-200 text-green-800' : ''}
-                  `}
+      <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Skills & Technologies</h2>
+      <div className="space-y-12">
+        {skillCategories.map((category, index) => (
+          <div key={index}>
+            <h3 className="text-2xl font-semibold text-gray-800 mb-6 text-center">{category.title}</h3>
+            <div className="flex flex-wrap justify-center gap-8">
+              {category.skills.map((skill, skillIndex) => (
+                <div 
+                  key={skillIndex}
+                  className={`flex flex-col items-center transform transition-all duration-500 ${skillsInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
+                  style={{ transitionDelay: `${skillIndex * 100}ms` }}
                 >
-                  {skill.level}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {backendSkills.length > 0 && (
-        <div>
-          <h3 className="text-2xl font-semibold mb-4 text-gray-900">Backend</h3>
-          <ul className="space-y-2 text-gray-700">
-            {backendSkills.map((skill, index) => (
-              <li 
-                key={index} 
-                className="flex items-center transform transition-all duration-300"
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                {skill.name}
-                <span 
-                  className={`ml-2 px-2 py-0.5 rounded-full text-xs font-semibold 
-                    ${skill.level === 'advanced' ? 'bg-red-200 text-red-800' : ''}
-                    ${skill.level === 'intermediate' ? 'bg-blue-200 text-blue-800' : ''}
-                    ${skill.level === 'beginner' ? 'bg-green-200 text-green-800' : ''}
-                  `}
-                >
-                  {skill.level}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {toolsSkills.length > 0 && (
-        <div>
-          <h3 className="text-2xl font-semibold mb-4 text-gray-900">Tools</h3>
-          <ul className="space-y-2 text-gray-700">
-            {toolsSkills.map((skill, index) => (
-              <li 
-                key={index} 
-                className="flex items-center transform transition-all duration-300"
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                {skill.name}
-                <span 
-                  className={`ml-2 px-2 py-0.5 rounded-full text-xs font-semibold 
-                    ${skill.level === 'advanced' ? 'bg-red-200 text-red-800' : ''}
-                    ${skill.level === 'intermediate' ? 'bg-blue-200 text-blue-800' : ''}
-                    ${skill.level === 'beginner' ? 'bg-green-200 text-green-800' : ''}
-                  `}
-                >
-                  {skill.level}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
-
-      {otherSkills.length > 0 && (
-        <div>
-          <h3 className="text-2xl font-semibold mb-4 text-gray-900">Other</h3>
-          <ul className="space-y-2 text-gray-700">
-            {otherSkills.map((skill, index) => (
-              <li 
-                key={index} 
-                className="flex items-center transform transition-all duration-300"
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
-                <span className="w-2 h-2 bg-blue-500 rounded-full mr-3"></span>
-                {skill.name}
-                <span 
-                  className={`ml-2 px-2 py-0.5 rounded-full text-xs font-semibold 
-                    ${skill.level === 'advanced' ? 'bg-red-200 text-red-800' : ''}
-                    ${skill.level === 'intermediate' ? 'bg-blue-200 text-blue-800' : ''}
-                    ${skill.level === 'beginner' ? 'bg-green-200 text-green-800' : ''}
-                  `}
-                >
-                  {skill.level}
-                </span>
-              </li>
-            ))}
-          </ul>
-        </div>
-      )}
+                  <div className="w-24 h-24 bg-white rounded-full shadow-lg flex items-center justify-center mb-4 transform hover:scale-110 transition-transform duration-300">
+                    {skill.icon && <SkillIcon skillName={skill.name} className="text-4xl text-blue-500" />}
+                  </div>
+                  <span className="text-lg font-medium text-gray-700">{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

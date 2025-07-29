@@ -20,7 +20,7 @@ describe('About', () => {
 
   it('renders resume download button', () => {
     render(<About />);
-    const downloadButton = screen.getByRole('link', { name: /download resume/i });
+    const downloadButton = screen.getByRole('link', { name: /download cv/i });
     expect(downloadButton).toBeInTheDocument();
     expect(downloadButton).toHaveAttribute('href', '/CV__Nutthawoot_P.pdf');
     expect(downloadButton).toHaveAttribute('download');

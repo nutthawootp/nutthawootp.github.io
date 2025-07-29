@@ -111,9 +111,30 @@ src/
 - `npm test` - Run unit tests
 - `npm run coverage` - Run tests with coverage report
 
+## 🧪 Testing
+
+The project includes comprehensive unit and integration tests to ensure reliability and maintainability. Tests are written using Vitest and React Testing Library, covering various aspects of the application:
+
+- **Component Rendering**: Verifies that components render correctly with expected props and state.
+- **User Interactions**: Simulates user events (e.g., clicks, form submissions) to ensure proper functionality.
+- **Responsive Behavior**: Checks how components adapt to different screen sizes.
+- **Form Validation**: Ensures that form inputs are validated correctly.
+- **Navigation Functionality**: Tests routing and link behaviors.
+- **Scroll Behaviors**: Verifies custom scroll-related functionalities (e.g., Back to Top, Scroll Spy).
+
+To run the test suite:
+
+```bash
+# Run tests in watch mode
+npm test
+
+# Run tests with coverage report
+npm run coverage
+```
+
 ## 📊 Build Process
 
-Understanding the project's build process is crucial for development and deployment. Below is a flowchart illustrating the steps involved when you run `npm run build`:
+Below is a flowchart illustrating the steps involved when you run `npm run build`:
 
 ```mermaid
 graph TD
@@ -130,7 +151,7 @@ graph TD
     style A stroke:#28a745,stroke-width:2px;
     style B stroke:#6c757d,stroke-width:2px;
     style C stroke:#6c757d,stroke-width:2px;
-    style D stroke:#6c757d,stroke-width:2px;
+    style D stroke:#042f5a,stroke-width:2px;
     style E stroke:#6c757d,stroke-width:2px;
     style F stroke:#dc3545,stroke-width:2px;
     style G stroke:#6c757d,stroke-width:2px;
@@ -168,26 +189,6 @@ To manually deploy the application:
 
 2. The `dist` directory will contain the production-ready static files. You can then deploy these files to your preferred hosting service (e.g., Netlify, Vercel, GitHub Pages).
 
-## 🧪 Testing
-
-The project includes comprehensive unit and integration tests to ensure reliability and maintainability. Tests are written using Vitest and React Testing Library, covering various aspects of the application:
-
-- **Component Rendering**: Verifies that components render correctly with expected props and state.
-- **User Interactions**: Simulates user events (e.g., clicks, form submissions) to ensure proper functionality.
-- **Responsive Behavior**: Checks how components adapt to different screen sizes.
-- **Form Validation**: Ensures that form inputs are validated correctly.
-- **Navigation Functionality**: Tests routing and link behaviors.
-- **Scroll Behaviors**: Verifies custom scroll-related functionalities (e.g., Back to Top, Scroll Spy).
-
-To run the test suite:
-
-```bash
-# Run tests in watch mode
-npm test
-
-# Run tests with coverage report
-npm run coverage
-```
 
 ## 📝 License
 

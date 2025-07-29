@@ -14,6 +14,7 @@ export interface Skill {
   name: string;
   category: 'frontend' | 'backend' | 'tools' | 'other';
   level: 'beginner' | 'intermediate' | 'advanced';
+  icon?: string;
 }
 
 export interface PersonalInfo {
