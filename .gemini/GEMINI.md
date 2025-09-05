@@ -84,3 +84,9 @@ To create a commit with a multi-line message in a way that is robust and avoids 
         ```bash
         rm commit_message.tmp
         ```
+
+## SEO and Content Control
+
+- The `public/robots.txt` file is configured to disallow crawlers from indexing the `CV__Nutthawoot_P.pdf` file.
+- This is to ensure personal documents are not publicly discoverable via search engines.
+- Any future sensitive files or paths should be added to this `robots.txt` file.

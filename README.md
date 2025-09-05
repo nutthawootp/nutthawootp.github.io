@@ -59,6 +59,8 @@ This portfolio website is packed with features designed to provide a rich and in
 
 - **Smooth Navigation**: Includes a "Back to Top" functionality for improved user experience on longer pages and a scroll spy feature to highlight the active section in the navigation.
 
+- **Privacy Control**: A `robots.txt` file is configured to prevent search engines from indexing sensitive documents, such as the CV, ensuring personal information remains private.
+
 ## 📦 Project Structure
 
 The project follows a clear and modular structure to ensure maintainability and scalability:

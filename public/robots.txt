@@ -1,0 +1,2 @@
+User-agent: *
+Disallow: /CV__Nutthawoot_P.pdf
